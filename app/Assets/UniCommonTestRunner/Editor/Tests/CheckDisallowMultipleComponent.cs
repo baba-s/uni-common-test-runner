@@ -29,6 +29,8 @@ namespace UniCommonTestRunner
 
 			foreach ( var component in components )
 			{
+				if ( component == null ) return true;
+
 				var type = component.GetType();
 				var attrs = type.GetCustomAttributes( typeof( DisallowMultipleComponent ), true );
 
