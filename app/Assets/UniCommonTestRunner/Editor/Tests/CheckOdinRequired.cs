@@ -45,9 +45,8 @@ namespace UniCommonTestRunner
 					if ( attrs == null || attrs.Length <= 0 ) continue;
 
 					var value = field.GetValue( component );
-
-					//if ( value != null ) continue;
-					if ( value.ToString() != "null" ) continue;
+		
+					if ( value != null && value.ToString() != "null" ) continue;
 
 					return true;
 				}
